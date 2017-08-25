@@ -19,7 +19,7 @@ class TreeNode {
 	}
 }
 
-public class MinimumDepthofBinaryTree001 {
+public class MinimumDepthofBinaryTree_Ê÷_001 {
 
 	public int run(TreeNode root) {
 		if (root == null)
