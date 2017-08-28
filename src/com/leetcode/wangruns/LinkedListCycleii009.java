@@ -33,6 +33,18 @@ import java.util.HashSet;
  * 他们必然会在环的入口处，即B点相遇
  * 
  */
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
 public class LinkedListCycleii009 {
 	
 	/**
