@@ -1,6 +1,7 @@
 package com.leetcode.wangruns;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 import com.leetcode.wangruns.Leetcode.TreeNode;
@@ -72,6 +73,63 @@ public class Leetcode {
 		
 		
 	}
+	
+	//9、linked-list-cycle-ii[链表]
+	/**
+	 * Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+	 * Follow up:
+	 * Can you solve it without using extra space?
+	 * 
+	 * 
+	 */
+	public ListNode detectCycle(ListNode head) {
+		if(head==null) return head;
+		//找到相遇点
+		ListNode fast=head,low=head;
+		while(fast!=null&&fast.next!=null){
+			fast=fast.next.next;
+			low=low.next;
+			//相遇
+			if(fast==low){
+				//慢指针指向头，快慢指针以相同的速度走，再次相遇便是环入口
+				low=head;
+				while(low!=fast){
+					low=low.next;
+					fast=fast.next;
+				}
+				return low;
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * 开辟新空间的话，题目会变得非常简单
+	 */
+	//detectCycleWithExtraSpace1 断链法，访问过的指向trap
+	public ListNode detectCycleWithExtraSpace1(ListNode head) {
+		if(head==null) return head;
+		ListNode next=null;
+		ListNode trap=new ListNode(0);
+		while(head.next!=null){
+			if(head.next==trap) return head;
+			next=head.next;
+			head.next=trap;
+			head=next;
+		}
+		return null;
+	}
+	
+	//detectCycleWithExtraSpace2 利用set无重复元素的特征
+	public ListNode detectCycleWithExtraSpace2(ListNode head) {
+        if(head==null) return head;
+        HashSet<ListNode> set=new HashSet<>();
+        while(head!=null){
+        	if(!set.add(head)) return head;
+        	head=head.next;
+        }
+        return null;
+    }
 	
 	//8、reorder-list[链表]
 	/**
