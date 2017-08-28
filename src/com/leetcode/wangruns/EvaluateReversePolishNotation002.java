@@ -11,7 +11,7 @@ import java.util.LinkedList;
  * 
  * 可以利用栈的特性来模拟解决
  */
-public class EvaluateReversePolishNotation_栈_002 {
+public class EvaluateReversePolishNotation002 {
 	public int evalRPN(String[] tokens) {
 		int len = tokens.length;
 		LinkedList<String> stack = new LinkedList<>();

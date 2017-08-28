@@ -19,7 +19,7 @@ Given binary tree{1,#,2,3},
 return[1,2,3].
 Note: Recursive solution is trivial, could you do it iteratively?
  */
-public class BinaryTreePreorderTraversal_Ê÷_007 {
+public class BinaryTreePreorderTraversal007 {
 	
 	//Recursive version
 	/**

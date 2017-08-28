@@ -33,7 +33,7 @@ import java.util.HashSet;
  * 他们必然会在环的入口处，即B点相遇
  * 
  */
-public class LinkedListCycleii_链表_009 {
+public class LinkedListCycleii009 {
 	
 	/**
 	 * 不另外开辟空间

@@ -30,7 +30,7 @@ class Point {
 	}
 }
 
-public class MaxPointsOnALine_Ã¶¾Ù_003 {
+public class MaxPointsOnALine003 {
 
 	public int maxPoints(Point[] points) {
 		int res = 0;

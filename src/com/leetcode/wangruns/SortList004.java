@@ -18,7 +18,7 @@ class ListNode {
 	}
 }
 
-public class SortList_链表_004 {
+public class SortList004 {
 
 	public ListNode sortList(ListNode head) {
 		// 如果是空链表或者只有一个节点，不用排序

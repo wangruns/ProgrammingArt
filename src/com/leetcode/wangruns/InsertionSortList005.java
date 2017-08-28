@@ -20,7 +20,7 @@ package com.leetcode.wangruns;
  *     }
  * }
  */
-public class InsertionSortList_排序_005 {
+public class InsertionSortList005 {
 
 	public ListNode insertionSortList(ListNode head) {
 		//为空或只有一个节点，则不用排序

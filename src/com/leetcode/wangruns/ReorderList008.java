@@ -29,7 +29,7 @@ Given{1,2,3,4}, reorder it to{1,4,2,3}.
  *     }
  * }
  */
-public class ReorderList_Á´±í_008 {
+public class ReorderList008 {
 	
 	/**
 	 * ²»½èÖú¸¨Öú¿Õ¼ä
