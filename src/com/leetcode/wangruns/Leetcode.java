@@ -53,21 +53,94 @@ public class Leetcode {
 		r1.right = r2;
 		r2.left = r3;
 		r2.right=r4;
-		ListNode l1=o.new ListNode(3);
-		ListNode l2=o.new ListNode(4);
-		ListNode l3=o.new ListNode(1001);
-		ListNode l4=o.new ListNode(1110);
+		ListNode l1=o.new ListNode(1);
+		ListNode l2=o.new ListNode(2);
+		ListNode l3=o.new ListNode(3);
+		ListNode l4=o.new ListNode(4);
 		l1.next=l2;
 		l2.next=l3;
 		l3.next=l4;
 		
 		
 		
-		ArrayList<Integer> res=o.postorderTraversal(r1);
-		System.out.println(res);
+		o.reorderList(l1);
+		System.out.println(l1);
+		while(l1!=null){
+			System.out.println(l1.val);
+			l1=l1.next;
+		}
 		
 		
 	}
+	
+	//8、reorder-list[链表]
+	/**
+	Given a singly linked list L: L 0→L 1→…→L n-1→L n,
+	reorder it to: L 0→L n →L 1→L n-1→L 2→L n-2→…
+	You must do this in-place without altering the nodes' values.
+	For example,
+	Given{1,2,3,4}, reorder it to{1,4,2,3}.
+	*
+	*找到链表中点，快慢指针. {1,2} 和 {3,4}
+	*将链表的后半段反转. {1,2} 和 {4,3}
+	*合并. {1,4,2,3}
+	*
+	 */
+	public void reorderList(ListNode head) {
+		if(head==null) return;
+		//中点断开
+		ListNode fast=head,low=head;
+		while(fast!=null&&fast.next!=null&&fast.next.next!=null){
+			fast=fast.next.next;
+			low=low.next;
+		}
+		ListNode middle=low.next;
+		low.next=null;
+		//后半段反转
+		ListNode pre=null,next=null;
+		while(middle!=null){
+			next=middle.next;
+			middle.next=pre;
+			pre=middle;
+			middle=next;
+		}
+		//合并
+		middle=pre;
+		ListNode middleNext=null,headNext=null;
+		while(head!=null&&middle!=null){
+		    middleNext=middle.next;
+		    headNext=head.next;
+			middle.next=head.next;
+			head.next=middle;
+			middle=middleNext;
+			head=headNext;
+		}
+	}
+	//利用了辅助空间
+	/**
+	 * 运行时间：1566ms
+	 * 占用内存：39440k
+	 */
+	public void reorderList1(ListNode head) {
+		if(head==null) return;
+        LinkedList<ListNode> nodeList=new LinkedList<ListNode>();
+        ListNode res=head;
+        while(res!=null){
+        	nodeList.add(res);
+        	res=res.next;
+        }
+        res=nodeList.removeFirst();
+        boolean isFirst=false;
+        ListNode node=null;
+        while(!nodeList.isEmpty()){
+        	if(isFirst) node=nodeList.removeFirst();
+        	else node=nodeList.removeLast();
+        	isFirst=!isFirst;
+        	node.next=null;
+        	res.next=node;
+        	res=res.next;
+        }
+    }
 	
 	//7、binary-tree-preorder-traversal[树]
 	/**
