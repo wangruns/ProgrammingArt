@@ -10,6 +10,18 @@ import com.leetcode.wangruns.Leetcode.ListNode;
  * 
  * 快慢指针相遇则表示有环
  */
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
 public class LinkedListCycle010 {
 
 	public boolean hasCycle(ListNode head) {
