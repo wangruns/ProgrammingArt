@@ -78,6 +78,57 @@ public class Leetcode {
 		
 	}
 	
+	//15、single-number-ii[复杂度]
+	/**
+	 * Given an array of integers, every element appears three times except for one. Find that single one.
+	 * Note: 
+	 * Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+	 * 
+	 * Single Number的本质，就是用一个数记录每个bit出现的次数，如果一个bit出现两次就归0，
+	 * 这种运算采用二进制底下的位操作^是很自然的.
+	 * Single Number II中，如果能定义三进制底下的某种位操作，也可以达到相同的效果,
+	 * Single Number II中想要记录每个bit出现的次数，一个数搞不定就加两个数，用ones来记录只出现过一次的bits,
+	 * 用twos来记录只出现过两次的bits，ones&twos实际上就记录了出现过三次的bits，
+	 * 这时候我们来模拟进行出现3次就抵消为0的操作，抹去ones和twos中都为1的bits。
+	 * 
+	 */
+	public int singleNumberFromThree(int[] A) {
+		//记录出现了1次的bits
+        int one=0;
+        //记录出现了2次的bits
+        int two=0;
+        //记录出现了3次的bits
+        int three=0;
+        for(int v:A){
+        	//先更新twos
+        	two|=one&v;
+        	one^=v;
+        	//one和two中都为1则出现了3次
+        	three=one&two;
+        	//清除出现了3次的
+        	one&=~three;
+        	two&=~three;
+        }
+        return one;
+    }
+	
+	//14、single-number[复杂度]
+	/**
+	 * Given an array of integers, every element appears twice except for one. Find that single one.
+	 * Note: 
+	 * Your algorithm should have a linear runtime complexity. 
+	 * Could you implement it without using extra memory?
+	 * 
+	 * 除了一个单身的，其他都是两两配对的，联想到异或
+	 * 两个相同的数异或为0，而0和任何数异或为任何数
+	 * 所以可以将他们全部异或一次，最后的结果就是那个单身的数.
+	 */
+	public int singleNumberFromTwo(int[] A) {
+		int singleNumber=0;
+        for(int i=0;i<A.length;i++) singleNumber^=A[i];
+        return singleNumber;
+    }
+	
 	//13、copy-list-with-random-pointer[链表]
 	/**
 	 * A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
