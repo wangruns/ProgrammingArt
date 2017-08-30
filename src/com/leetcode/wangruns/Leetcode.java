@@ -78,6 +78,31 @@ public class Leetcode {
 		
 	}
 	
+	//16、candy[动态规划]
+	/**
+	 * There are N children standing in a line. Each child is assigned a rating value.
+	 * You are giving candies to these children subjected to the following requirements:
+	 * Each child must have at least one candy.
+	 * Children with a higher rating get more candies than their neighbors.
+	 * What is the minimum candies you must give?
+	 */
+	public int candy(int[] ratings) {
+		if(ratings.length==0) return 0;
+        int res=0;
+        //dp[i]表示i小朋友得到的糖果
+        int dp[]=new int[ratings.length];
+        //从左向右扫描
+        for(int i=1;i<ratings.length;i++)
+        	if(ratings[i]>ratings[i-1]) dp[i]=dp[i-1]+1;
+        //从右向左扫描
+        for(int i=ratings.length-1;i>0;i--)
+        	if(ratings[i-1]>ratings[i]&&dp[i-1]<=dp[i]) dp[i-1]=dp[i]+1;
+        //计算和
+        for(int v:dp) res+=v;
+        return res+ratings.length;
+    }
+	
+
 	//15、single-number-ii[复杂度]
 	/**
 	 * Given an array of integers, every element appears three times except for one. Find that single one.
@@ -90,6 +115,17 @@ public class Leetcode {
 	 * Single Number II中想要记录每个bit出现的次数，一个数搞不定就加两个数，用ones来记录只出现过一次的bits,
 	 * 用twos来记录只出现过两次的bits，ones&twos实际上就记录了出现过三次的bits，
 	 * 这时候我们来模拟进行出现3次就抵消为0的操作，抹去ones和twos中都为1的bits。
+	 * 
+	 * A={1,1,1,2},ones=0,twos=0,threes=0
+	 * i=0	v=1
+	 * twos=ones & v         =>twos=00
+	 * ones^=v                   =>ones=01
+	 * threes=one&twos     =>threes=00
+	 * 
+	 * i=1	v=1
+	 * twos=ones & v		    =>01 & 01 	  =>twos=01
+	 * ones^=v				    =>01^01   	  =>ones=00
+	 * threes=ones&twos   =>01&00		  =>threes=00
 	 * 
 	 */
 	public int singleNumberFromThree(int[] A) {
