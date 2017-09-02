@@ -64,18 +64,56 @@ public class Leetcode {
 		l3.next=l4;
 		
 		
-		
+		System.out.println(o.partition("aab"));
 
-		UndirectedGraphNode graphNode=o.new UndirectedGraphNode(0);
-		ArrayList<UndirectedGraphNode> neighbors=new ArrayList<>();
-		neighbors.add(graphNode);
-		neighbors.add(graphNode);
-		graphNode.neighbors=neighbors;
-		System.out.println(o.cloneGraph(graphNode).neighbors);
-		
 		
 	}
+	//19、palindrome-partitioning[字符串]
+	/**
+	 * Given a string s, partition s such that every substring of the partition is a palindrome.
+	 * Return all possible palindrome partitioning of s.
+	 * For example, given s ="aab",
+	 * Return:
+	 * 
+				[
+				    ["aa","b"],
+				    ["a","a","b"]
+				 ]
+	 */
+	private ArrayList<ArrayList<String>> res018;
+	private ArrayList<String> curList018;
+	public ArrayList<ArrayList<String>> partition(String s) {
+		res018=new ArrayList<>();
+		curList018=new ArrayList<>();
+		handle018(s);
+		return res018;
+	}
 	
+	private void handle018(String s) {
+		//完成一次对s的搜索，position位置移动到了最后
+		if(curList018.size()>0&&s.length()==0){
+			ArrayList<String> t=(ArrayList<String>) curList018.clone();
+			res018.add(t);
+		}
+		for(int i=0;i<s.length();i++){
+			String subStr=s.substring(0,i+1);
+			if(isPalindrom(subStr)){
+				curList018.add(subStr);
+				handle018(s.substring(i+1));
+				curList018.remove(curList018.size()-1);
+			}
+		}
+	}
+
+	private boolean isPalindrom(String s) {
+		int l=0,r=s.length()-1;
+		while(l<r){
+			if (s.charAt(l) != s.charAt(r)) return false;
+			l++;r--;
+		}
+		return true;
+	}
+
 	//18、clone-graph[图]
 	/**
 	 * Clone an undirected graph. Each node in the graph contains alabeland a list of its neighbors.
