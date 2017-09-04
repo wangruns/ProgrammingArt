@@ -63,11 +63,41 @@ public class Leetcode {
 		l2.next=l3;
 		l3.next=l4;
 		
-		
-		System.out.println(o.partition("aab"));
+//		o.minCut("efe");abbab
+		System.out.println(o.minCut("dde"));
 
 		
+		
 	}
+	
+	//20、palindrome-partitioning-ii[动态规划]
+	/**
+	 * Given a string s, partition s such that every substring of the partition is a palindrome.
+	 * Return the minimum cuts needed for a palindrome partitioning of s.
+	 * For example, given s ="aab", 
+	 * Return 1 since the palindrome partitioning ["aa","b"] could be produced using 1 cut.
+	 * 
+	 * dp[i]表示从0-i这段的最小分割数
+	 */
+	 public int minCut(String s) {
+		 int dp[]=new int[s.length()];
+		 //字符的总长度逐步变长
+		 for(int i=0;i<s.length();i++){
+			 String curStr=s.substring(0,i+1);
+			 if(isPalindrom(curStr)) dp[i]=0;
+			 else{
+				 dp[i]=i;//最多i次分割(初始化成最大的)
+				 for(int j=1;j<=i;j++){
+					 if(isPalindrom(s.substring(j, i+1))) dp[i]=Math.min(dp[i], dp[j-1]+1);
+					 else dp[i]=Math.min(dp[i], dp[j-1]+i-j+1);
+				 }
+			 }
+		 }
+		 return dp[s.length()-1];
+	 }
+	        
+	
+	
 	//19、palindrome-partitioning[字符串]
 	/**
 	 * Given a string s, partition s such that every substring of the partition is a palindrome.
