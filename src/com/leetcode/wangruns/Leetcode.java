@@ -64,19 +64,38 @@ public class Leetcode {
 		l3.next=l4;
 		
 
-		char c[][]={
-				"XOXOXO".toCharArray(),
-				"OXOXOX".toCharArray(),
-				"XOXOXO".toCharArray(),
-				"OXOXOX".toCharArray(),
-		};
-		SurroundedRegions021 oo=new SurroundedRegions021();
-		oo.solve(c);
-		System.out.println(c);
+		TreeNode c1=o.new TreeNode(1);
+		TreeNode c2=o.new TreeNode(0);
+		c1.left=c2;
+		System.out.println(o.sumNumbers(c1));
 		
 		
 	}
+	//22、sum-root-to-leaf-numbers[树]
+	/**
+	 * Given a binary tree containing digits from0-9only, each root-to-leaf path could represent a number.
+	 * An example is the root-to-leaf path1->2->3which represents the number123
+	 * Find the total sum of all root-to-leaf numbers.
+	 * For example,
+	    1
+	   / \
+	  2   3
+	 * The root-to-leaf path1->2represents the number12.
+	 * The root-to-leaf path1->3represents the number13.
+	 * Return the sum = 12 + 13 =25.
+	 */
+	public int sumNumbers(TreeNode root) {
+        return preorderSumNumers(root,0);
+    }
 	
+	//返回从根节点到当前节点的路径和
+	private int preorderSumNumers(TreeNode root, int sum) {
+		if(root==null) return 0;
+		sum=sum*10+root.val;
+		if(root.left==null&&root.right==null) return sum;
+		return preorderSumNumers(root.left, sum)+preorderSumNumers(root.right, sum);
+	}
+
 	//21、	surrounded-regions[数组]
 	/**
 	 * Given a 2D board containing'X'and'O', capture all regions surrounded by'X'.
