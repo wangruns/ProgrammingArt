@@ -70,18 +70,37 @@ public class Leetcode {
 //		for(String i:ss) dict.add(i);
 		
 		
-		WordLadder025 w=new WordLadder025();
-		String start ="hit";
-		String end ="cog";
-		HashSet<String> dict=new HashSet<>();
-		String ss[]={"hot","dot","dog","lot","log"};
-		for(String i:ss) dict.add(i);
+		String s="A man, a plan, a canal: Panama";
+		String ss=".,";
+		String sss="1a2";
+		System.out.println(o.isPalindrome(s));
+		
 		
 
 		
-		System.out.println(w.ladderLength(start, end, dict));
 		
 	}
+	
+	//26,  valid-palindrome[µ›πÈ] 
+	/**
+	 * Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+	 * For example,
+	 * "A man, a plan, a canal: Panama"is a palindrome."race a car"is not a palindrome. 
+	 * Note:
+	 * Have you consider that the string might be empty? This is a good question to ask during an interview. 
+	 *  For the purpose of this problem, we define empty string as valid palindrome. 
+	 */
+	public boolean isPalindrome(String s) {
+		s=s.toLowerCase();
+        int l=0,r=s.length()-1;
+        while(l<r) {
+        	while(l<r&&!((s.charAt(l)<='z'&&s.charAt(l)>='a')||(s.charAt(l)<='9'&&s.charAt(l)>='0'))) l++;
+        	while(l<r&&!((s.charAt(r)<='z'&&s.charAt(r)>='a')||(s.charAt(r)<='9'&&s.charAt(r)>='0'))) r--;
+        	if(s.charAt(l)!=s.charAt(r)) return false;
+        	l++;r--;
+        }
+        return true;
+    }
 	
 	//25°¢	word-ladder[≤È’“]
 	/**
