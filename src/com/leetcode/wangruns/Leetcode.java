@@ -69,6 +69,11 @@ public class Leetcode {
 		
 	}
 	
+	//30、best-time-to-buy-and-sell-stock-iii[数组]
+	/**
+	 * 
+	 */
+	
 	
 	//29、best-time-to-buy-and-sell-stock-ii[数组]
 	/**
