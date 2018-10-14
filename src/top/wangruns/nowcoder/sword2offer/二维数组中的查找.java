@@ -42,7 +42,7 @@ public class 二维数组中的查找 {
 	public boolean Find3(int target, int [][] array) {
 		int row=array.length-1;
 		int col=0;
-		while(row>0&&col<array[0].length) {
+		while(row>=0&&col<array[0].length) {
 			if(array[row][col]==target) return true;
 			else if(array[row][col]>target) row--;
 			else col++;
