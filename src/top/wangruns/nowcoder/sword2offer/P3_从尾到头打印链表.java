@@ -9,7 +9,7 @@ import java.util.Collections;
 输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
  *
  */
-public class 从尾到头打印链表 {
+public class P3_从尾到头打印链表 {
 	
 	//先翻转链表，然后在遍历
 	public ArrayList<Integer> printListFromTailToHead1(ListNode listNode) {
@@ -47,4 +47,12 @@ public class 从尾到头打印链表 {
 		res.add(listNode.val);
 		return res;
     }
+	
+	public ArrayList<Integer> printListFromTailToHead4(ListNode listNode) {
+		if(listNode!=null) printListFromTailToHead4(listNode.next);
+		else return res;
+		res.add(listNode.val);
+		return res;
+    }
+	
 }
