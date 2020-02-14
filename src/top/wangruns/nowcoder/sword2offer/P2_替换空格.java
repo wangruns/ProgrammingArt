@@ -7,7 +7,7 @@ package top.wangruns.nowcoder.sword2offer;
 例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
  *
  */
-public class 替换空格 {
+public class P2_替换空格 {
 	
 	//直接使用String的replaceAll方法正则替换
 	public String replaceSpace1(StringBuffer str) {
