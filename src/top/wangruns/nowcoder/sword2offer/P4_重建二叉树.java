@@ -15,7 +15,7 @@ import java.util.Arrays;
  而 1 {5,3,8,6} 表示根节点的右子树有4个节点，对应前序中的 1 {3,5,6,8}
  即 前序1 {2,4,7} {3,5,6,8} 中序{4,7,2} 1 {5,3,8,6}
  */
-public class 重建二叉树 {
+public class P4_重建二叉树 {
 	
 	//直接利用Arrays.copyOfRange([],from,to)复制产生子数组
 	public TreeNode reConstructBinaryTree1(int [] pre,int [] in) {
@@ -28,7 +28,6 @@ public class 重建二叉树 {
 				break;
 			}
 		}
-		
 		treeNode.left=reConstructBinaryTree1(Arrays.copyOfRange(pre,1, findPos+1),Arrays.copyOfRange(in, 0, findPos));
 		treeNode.right=reConstructBinaryTree1(Arrays.copyOfRange(pre,findPos+1, pre.length),Arrays.copyOfRange(in, findPos+1, in.length));
 		return treeNode;
@@ -48,7 +47,6 @@ public class 重建二叉树 {
 				break;
 			}
 		}
-		
 		treeNode.left=_re(pre,preL+1,preL+(findPos-inL),in,inL,findPos-1);
 		treeNode.right=_re(pre,preL+(findPos-inL)+1,preR,in,findPos+1,inR);
 		return treeNode;
