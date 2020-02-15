@@ -7,7 +7,7 @@ package top.wangruns.nowcoder.sword2offer;
 n<=39
  *
  */
-public class 斐波那契数列 {
+public class P7_斐波那契数列 {
 	
 	//递归方式
 	public int Fibonacci1(int n) {
