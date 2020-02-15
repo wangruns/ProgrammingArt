@@ -9,7 +9,7 @@ package top.wangruns.nowcoder.sword2offer;
  * 分析
  其实就是斐波那契的应用，第n个台阶，肯定只能由n-2，或者n-1跳上来
  */
-public class 跳台阶 {
+public class P8_跳台阶 {
 	
 	public int JumpFloor(int target) {
 		if(target<=2) return target;
