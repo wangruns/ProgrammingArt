@@ -15,7 +15,7 @@ f(n-1)= f(n-2) + ... + f(1)
 所以 f(n)= 2f(n-1)
 显然为等比数列，而且f(1)=1，所以f(n)=2^(n-1)
  */
-public class 变态跳台阶 {
+public class P9_变态跳台阶 {
 	
 	public int JumpFloorII(int target) {
         return 1<<--target;
