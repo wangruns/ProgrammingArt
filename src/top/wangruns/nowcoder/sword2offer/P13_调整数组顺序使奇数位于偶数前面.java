@@ -8,7 +8,7 @@ package top.wangruns.nowcoder.sword2offer;
 并保证奇数和奇数，偶数和偶数之间的相对位置不变。
  *
  */
-public class 调整数组顺序使奇数位于偶数前面 {
+public class P13_调整数组顺序使奇数位于偶数前面 {
 	
 	//最容易想到的一种方法，用空间换时间
 	public void reOrderArray1(int [] array) {
