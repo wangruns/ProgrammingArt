@@ -14,7 +14,7 @@ package top.wangruns.nowcoder.sword2offer;
 不妨设输入的指数规模n=2^k，而在计算机中仅仅需要k个bit就可以表示这个数。
 对于快速幂来说，每次处理1bit，所以只需k次就能处理完，即时间复杂度为THETA(log n)
  */
-public class 数值的整数次方 {
+public class P12_数值的整数次方 {
 	
 	//快速幂解法O(log(n))
 	public double Power(double base, int exponent) {
