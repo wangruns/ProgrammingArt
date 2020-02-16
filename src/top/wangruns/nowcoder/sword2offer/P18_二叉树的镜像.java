@@ -20,7 +20,7 @@ package top.wangruns.nowcoder.sword2offer;
     	11 9 7  5
  *
  */
-public class 二叉树的镜像 {
+public class P18_二叉树的镜像 {
 	
 	public void Mirror(TreeNode root) {
         if(root==null) return;

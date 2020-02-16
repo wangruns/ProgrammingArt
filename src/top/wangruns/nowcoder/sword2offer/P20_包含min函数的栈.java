@@ -12,7 +12,7 @@ import java.util.Stack;
 dataStack:存放所有数据的栈	5,  4,  3, 8, 10, 11, 12, 1 ,1
 minStack:存放当前栈中的最小值	5,  4,  3，1, 1	
  */
-public class 包含min函数的栈 {
+public class P20_包含min函数的栈 {
 	private Stack<Integer> dataStack=new Stack<>();
 	private Stack<Integer> minStack=new Stack<>();
 	

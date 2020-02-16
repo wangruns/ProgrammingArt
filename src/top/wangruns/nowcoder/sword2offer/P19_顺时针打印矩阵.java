@@ -14,7 +14,7 @@ import java.util.ArrayList;
 解题的关键在于定义好矩阵的边界
 int left=0,right=col-1,top=0,bottom=row-1;
  */
-public class 顺时针打印矩阵 {
+public class P19_顺时针打印矩阵 {
 	
 	public ArrayList<Integer> printMatrix(int [][] matrix) {
 		if(matrix==null)return null;
