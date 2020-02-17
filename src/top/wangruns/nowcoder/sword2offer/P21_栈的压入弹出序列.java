@@ -13,7 +13,7 @@ import java.util.Stack;
  * 分析
 用一个辅助栈来模拟操作
  */
-public class 栈的压入弹出序列 {
+public class P21_栈的压入弹出序列 {
 
 	public boolean IsPopOrder(int [] pushA,int [] popA) {
 		Stack<Integer> stack=new Stack<>();

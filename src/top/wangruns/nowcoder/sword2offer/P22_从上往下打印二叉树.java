@@ -12,7 +12,7 @@ import java.util.Queue;
  * 分析
 由于需要按层依次打印，所以可以借用一个辅助队列
  */
-public class 从上往下打印二叉树 {
+public class P22_从上往下打印二叉树 {
 	
 	public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
 		ArrayList<Integer> res=new ArrayList<>();
