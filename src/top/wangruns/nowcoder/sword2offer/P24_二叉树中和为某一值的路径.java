@@ -10,7 +10,7 @@ import java.util.ArrayList;
 (注意: 在返回值的list中，数组长度大的数组靠前)
  *
  */
-public class 二叉树中和为某一值的路径 {
+public class P24_二叉树中和为某一值的路径 {
 	
 	ArrayList<ArrayList<Integer>> res=new ArrayList<>();
 	ArrayList<Integer> path=new ArrayList<>();
