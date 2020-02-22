@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 由于数字2在数组中出现了5次，超过数组长度的一半，因此输出2。如果不存在则输出0。
  *
  */
-public class 数组中出现次数超过一半的数字 {
+public class P28_数组中出现次数超过一半的数字 {
 
 	//比较直观的一个方法是用哈希计数，O(n)但需要一个辅助哈希
 	public int MoreThanHalfNum_Solution1(int [] array) {
@@ -38,6 +38,7 @@ public class 数组中出现次数超过一半的数字 {
 		int door=array[0];//记录当前擂台上还存在的门派
 		int cnt=1;//记录当前擂台上还存在的门派的人数
 		for(int i=0;i<array.length-1;i++) {
+			System.out.println(i);
 			if(array[i]==array[i+1]) cnt++;//两个相同门派的人，不打，组成一队
 			else cnt--;//两个不同门派的人比武，这两个人同归于尽了...
 			if(cnt==0) {
