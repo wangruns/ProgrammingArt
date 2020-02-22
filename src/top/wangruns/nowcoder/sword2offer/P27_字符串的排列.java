@@ -11,7 +11,7 @@ import java.util.ArrayList;
 输入一个字符串,长度不超过9(可能有字符重复),字符只包括大小写字母。
  *
  */
-public class 字符串的排列 {
+public class P27_字符串的排列 {
 	
 	ArrayList<String> res=new ArrayList<>();
 	StringBuilder sb=new StringBuilder();
