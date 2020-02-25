@@ -15,7 +15,7 @@ import java.util.PriorityQueue;
 如果当前元素比堆顶元素还小，则删除堆顶元素，将新元素入堆
 (PriorityQueue优先队列实现了堆)
  */
-public class 最小的K个数 {
+public class P29_最小的K个数 {
 	
 	public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
 		ArrayList<Integer> res=new ArrayList<>();
