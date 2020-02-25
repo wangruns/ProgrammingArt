@@ -10,7 +10,7 @@ HZ偶尔会拿些专业问题来忽悠那些非计算机专业的同学。
 给一个数组，返回它的最大连续子序列的和，你会不会被他忽悠住？(子向量的长度至少是1
  *
  */
-public class 连续子数组的最大和 {
+public class P30_连续子数组的最大和 {
 	
 	public int FindGreatestSumOfSubArray1(int[] array) {
 		int max=array[0];
@@ -21,7 +21,6 @@ public class 连续子数组的最大和 {
 			else lastSequence=array[i];
 			if(max<lastSequence) max=lastSequence;
 		}
-		
 		return max;
     }
 	
@@ -39,7 +38,6 @@ public class 连续子数组的最大和 {
 			dp=Math.max(dp+array[i], array[i]);
 			max=Math.max(max, dp);
 		}
-		
 		return max;
     }
 
