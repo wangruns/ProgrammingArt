@@ -38,7 +38,7 @@ n = 12    3    41
 Reference:
 https://blog.csdn.net/yi_afly/article/details/52012593
  */
-public class 整数中1出现的次数从1到n整数中1出现的次数 {
+public class P31_整数中1出现的次数从1到n整数中1出现的次数 {
 	
 	//暴力方法
 	public int NumberOf1Between1AndN_Solution1(int n) {
