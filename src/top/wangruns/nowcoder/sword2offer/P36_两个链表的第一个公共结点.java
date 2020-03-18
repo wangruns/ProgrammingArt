@@ -8,7 +8,7 @@ package top.wangruns.nowcoder.sword2offer;
  * 分析
 两个链表从第一个公共节点之后就是重合的了，所以要是知道两个链表的长度差，即可
  */
-public class 两个链表的第一个公共结点 {
+public class P36_两个链表的第一个公共结点 {
 	
 	public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
 		ListNode p1=pHead1,p2=pHead1;
