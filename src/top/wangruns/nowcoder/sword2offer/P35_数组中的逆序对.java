@@ -16,7 +16,7 @@ package top.wangruns.nowcoder.sword2offer;
 输出7
  *
  */
-public class 数组中的逆序对 {
+public class P35_数组中的逆序对 {
 	
 	int cnt=0,big=1000000007;
 	public int InversePairs(int [] array) {
