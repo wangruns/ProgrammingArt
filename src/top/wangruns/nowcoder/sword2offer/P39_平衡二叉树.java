@@ -8,7 +8,7 @@ package top.wangruns.nowcoder.sword2offer;
  * 分析
 与计算树的深度类似，不过这里不同的是，如果当前子树已经不平衡了，则直接将当前子树的深度设置为-1返回
  */
-public class 平衡二叉树 {
+public class P39_平衡二叉树 {
 	
 	public boolean IsBalanced_Solution(TreeNode root) {
 		return treeDepth(root)>=0;
