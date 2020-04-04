@@ -14,7 +14,7 @@ LL不高兴了,他想了想,决定大\小 王可以看成任何数字,并且A看
  * 分析
 可以看出如果想要连续，则需要满足两个条件：a.除0(王)外不能有重复的元素；b.除0(王)外max-min<5;
  */
-public class 扑克牌顺子 {
+public class P45_扑克牌顺子 {
 	
 	//开辟一个map计数数组
 	public boolean isContinuous1(int [] numbers) {

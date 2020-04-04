@@ -8,7 +8,7 @@ package top.wangruns.nowcoder.sword2offer;
 例如，字符序列S=”abcXYZdef”,要求输出循环左移3位后的结果，即“XYZdefabc”。是不是很简单？OK，搞定它！
  *
  */
-public class 左旋转字符串 {
+public class P43_左旋转字符串 {
 	
 	//借助一个O(n)的空间
 	public String LeftRotateString1(String str,int n) {

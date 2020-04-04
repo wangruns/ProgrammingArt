@@ -9,7 +9,7 @@ package top.wangruns.nowcoder.sword2offer;
 Cat对一一的翻转这些单词顺序可不在行，你能帮助他么？
  *
  */
-public class 翻转单词顺序列 {
+public class P44_翻转单词顺序列 {
 	
 	public String ReverseSentence(String str) {
 		if(str==null||str.length()==0) return "";
