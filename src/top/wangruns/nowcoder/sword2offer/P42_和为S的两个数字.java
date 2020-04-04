@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * 分析
 既然数组是有序的，则想到用两个指针分别从两端左右夹逼
  */
-public class 和为S的两个数字 {
+public class P42_和为S的两个数字 {
 	
 	public ArrayList<Integer> FindNumbersWithSum(int [] array,int sum) {
 		ArrayList<Integer> res=new ArrayList<>();
