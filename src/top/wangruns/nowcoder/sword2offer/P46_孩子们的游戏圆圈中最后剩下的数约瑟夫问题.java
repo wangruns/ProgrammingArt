@@ -16,7 +16,7 @@ HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个�
  * 分析
 可以使用链表模拟游戏
  */
-public class 孩子们的游戏圆圈中最后剩下的数约瑟夫问题 {
+public class P46_孩子们的游戏圆圈中最后剩下的数约瑟夫问题 {
 	
 	//使用链表模拟
 	public int LastRemaining_Solution1(int n, int m) {

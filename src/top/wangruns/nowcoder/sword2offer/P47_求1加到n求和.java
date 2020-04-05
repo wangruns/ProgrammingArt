@@ -8,7 +8,7 @@ package top.wangruns.nowcoder.sword2offer;
  * 分析
 题目说了不许用循环，那就摆明了是要递归了
  */
-public class 求1加到n求和 {
+public class P47_求1加到n求和 {
 	
 	public int Sum_Solution(int n) {
 		int res=n;
