@@ -16,7 +16,7 @@ B[0]= 1   * A[1] * A[2] * ... * A[n-1]
 B[1]=A[0] *  1   * A[2] * ... * A[n-1]
 B[2]=A[0] * A[1] *  1   * ... * A[n-1]
  */
-public class 构建乘积数组 {
+public class P51_构建乘积数组 {
 	
 	public int[] multiply(int[] A) {
 		int[]B=new int[A.length];
