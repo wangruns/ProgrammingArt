@@ -8,7 +8,7 @@ package top.wangruns.nowcoder.sword2offer;
  * 分析
 异或可以看做一种加运算
  */
-public class 不用加减乘除做加法 {
+public class P48_不用加减乘除做加法 {
 	
 	public int Add(int num1,int num2) {
 		while(num2!=0) {

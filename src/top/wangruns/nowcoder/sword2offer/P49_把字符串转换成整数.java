@@ -13,7 +13,7 @@ package top.wangruns.nowcoder.sword2offer;
 输出0
  *
  */
-public class 把字符串转换成整数 {
+public class P49_把字符串转换成整数 {
 	
 	public int StrToInt(String str) {
 		if(str==null||str.isEmpty()) return 0;

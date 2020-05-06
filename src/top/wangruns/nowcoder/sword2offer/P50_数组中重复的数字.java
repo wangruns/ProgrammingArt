@@ -8,7 +8,7 @@ package top.wangruns.nowcoder.sword2offer;
 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是第一个重复的数字2。
  *
  */
-public class 数组中重复的数字 {
+public class P50_数组中重复的数字 {
 
 	/**
 	 * 这里要特别注意~返回任意重复的一个，赋值duplication[0]
@@ -47,5 +47,6 @@ public class 数组中重复的数字 {
     	}
 		return false;
     }
-
+	
+	
 }
