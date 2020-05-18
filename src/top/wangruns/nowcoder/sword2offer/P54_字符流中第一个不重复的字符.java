@@ -9,7 +9,7 @@ package top.wangruns.nowcoder.sword2offer;
 输出描述:如果当前字符流没有存在出现一次的字符，返回#字符。
  *
  */
-public class 字符流中第一个不重复的字符 {
+public class P54_字符流中第一个不重复的字符 {
 	private int[]hashTable=new int[256];
 	private char[] c=new char[256];
 	private int cIndex=0;

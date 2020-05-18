@@ -8,7 +8,7 @@ package top.wangruns.nowcoder.sword2offer;
 但是"12e","1a3.14","1.2.3","+-5"和"12e+4.3"都不是。
  *
  */
-public class 表示数值的字符串 {
+public class P53_表示数值的字符串 {
 	
 	public boolean isNumeric(char[] str) {
 		boolean isFirstPoint=true,isFirstE=true;;

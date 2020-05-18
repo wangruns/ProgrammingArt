@@ -12,7 +12,7 @@ package top.wangruns.nowcoder.sword2offer;
 	(a)该节点为左节点，那么其父节点就是下一个节点
 	(b)否则该节点为右节点，则需向上回退，直到当前节点为其父节点的左节点，那么其父节点就是下一个节点
  */
-public class 二叉树的下一个结点 {
+public class P57_二叉树的下一个结点 {
 	
 	public TreeLinkNode GetNext(TreeLinkNode pNode) {
 		if(pNode==null) return null;

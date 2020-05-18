@@ -7,7 +7,7 @@ package top.wangruns.nowcoder.sword2offer;
 例如，链表1->2->3->3->4->4->5 处理后为 1->2->5
  *
  */
-public class 删除链表中重复的结点 {
+public class P56_删除链表中重复的结点 {
 	
 	public ListNode deleteDuplication(ListNode pHead) {
 		ListNode cur=pHead,pre=pHead;
